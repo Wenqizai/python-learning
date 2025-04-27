@@ -123,13 +123,89 @@
 # coordinates[0] = 10 #  TypeError: 'tuple' object does not support item assignment
 
 # === Functions ===
-def say_hi(name, age):
-    print("Hello " + name + ", you are " + str(age))
-    print("Next line")
+# def say_hi(name, age):
+#     print("Hello " + name + ", you are " + str(age))
+#     print("Next line")
+#
+# print("Top")
+# say_hi("Tim", 25)
+# print("Bottom")
 
-print("Top")
-say_hi("Tim", 25)
-print("Bottom")
+# === return statement ===
+# def cube(num):
+#     return num * num * num
+#     # print("This is not printed") # 不会执行, 也不会报错
+#
+# result = cube(4)
+# print(cube(3))
+# print(result)
+
+# === If statement ===
+# is_male = input("Are you a male? 1 for yes, 0 for no: ")
+# is_male = int(is_male)
+# is_tall = True
+#
+# # 操作符 or and not
+# if is_male == 1 or is_tall:
+#     print("You are a male or tall or both")
+# elif is_male == 0 and is_tall:
+#     print("You are not a male and tall")
+# elif is_male == 0 and not is_tall:
+#     print("You are not a male but not tall")
+# else:
+#     print("Unknown")
+
+# === Compare ===
+# def max_num(num1, num2, num3):
+#     if num1 >= num2 and num1 >= num3:
+#         return num1
+#     elif num2 >= num1 and num2 >= num3:
+#         return num2
+#     else:
+#         return num3
+#
+# print(max_num(3, 40, 5))
+
+# === 2 Calculator ===
+# num1 = float(input("Enter first number: "))
+# operator = input("Enter operator: ")
+# num2 = float(input("Enter second number: "))
+#
+# if operator == "+":
+#     print(num1 + num2)
+# elif operator == "-":
+#     print(num1 - num2)
+# elif operator == "/":
+#     print(num1 / num2)
+# elif operator == "*":
+#     print(num1 * num2)
+# elif operator == "%":
+#     print(num1 % num2)
+# else:
+#     print("Invalid operator")
+
+# === Dictionary ===
+monthConversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+}
+
+print(monthConversions)
+print(monthConversions.get("Jan", "Not a valid key"))
+print(monthConversions["Jan"])
+
+
+
 
 
 
