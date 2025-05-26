@@ -1,0 +1,29 @@
+""" 
+字符查找使用脚本
+
+test: python fluent-python/p4/4-9-cf.py smiling
+"""
+import sys
+import unicodedata
+
+START, END = ord(' '), sys.maxunicode + 1
+
+def find(*query_words, start=START, end=END):
+    query = {w.lower() for w in query_words}
+    for code in range(start, end):
+        char = chr(code)
+        name = unicodedata.name(char, None)
+        if name and query.issubset(word.lower() for word in name.split()):
+            print(f'U+{code:04X}\t{char}\t{name}')
+
+
+def main(words):
+    if words:
+        find(*words)
+    else:
+        print('Please provide words to search for.')
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])
+
