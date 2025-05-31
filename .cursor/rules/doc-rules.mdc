@@ -6,4 +6,4 @@ alwaysApply: true
 
 # Your rule content
 
-- 相关文档需要放在路径 python-learning/doc 下
+- 相关文档需要放在路径 ./doc 下
