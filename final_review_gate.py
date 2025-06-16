@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     print("--- FINAL REVIEW GATE ACTIVE ---", flush=True)
     print("AI has completed its primary actions. Awaiting your review or further sub-prompts.", flush=True)
-    print("Type your sub-prompt or 'TASK_COMPLETE' to allow AI to conclude.", flush=True)
+    print("Type your sub-prompt, or one of: 'TASK_COMPLETE', 'Done', 'Quit', 'q' to signal completion.", flush=True)
     
     active_session = True
     while active_session:
@@ -36,14 +36,16 @@ if __name__ == "__main__":
             
             user_input = line.strip()
 
-            if user_input.upper() == 'TASK_COMPLETE':
-                print("--- REVIEW GATE: USER CONFIRMED TASK COMPLETE ---", flush=True)
+            # Check for exit conditions
+            if user_input.upper() in ['TASK_COMPLETE', 'DONE', 'QUIT', 'Q']:
+                print(f"--- REVIEW GATE: USER SIGNALED COMPLETION WITH '{user_input.upper()}' ---", flush=True)
                 active_session = False
                 break
-            elif user_input: # If there's any input other than an empty line
+            elif user_input: # If there's any other non-empty input (and not a completion command)
                 # This is the critical line the AI will "listen" for.
                 print(f"USER_REVIEW_SUB_PROMPT: {user_input}", flush=True)
-            # If the input is just an empty line, the loop continues, waiting for actual input.
+            # If user_input was empty (and not a completion command),
+            # the loop simply continues, and "REVIEW_GATE_AWAITING_INPUT:" will be printed again.
             
         except KeyboardInterrupt:
             print("--- REVIEW GATE: SESSION INTERRUPTED BY USER (KeyboardInterrupt) ---", flush=True)
