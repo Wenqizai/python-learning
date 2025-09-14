@@ -51,6 +51,7 @@ This repository is a Python learning project with two main educational tracks:
 - Serves as a quick reference for fundamental Python concepts
 
 #### Documentation (`doc/`)
+- All documentation-related files must be placed in this directory.
 - Comprehensive Python concept explanations in Chinese
 - Key topics include:
   - `python_multiple_inheritance.md` - Multiple inheritance patterns
@@ -58,20 +59,24 @@ This repository is a Python learning project with two main educational tracks:
   - `python_protocol_explained.md` - Protocol interface patterns
   - `python_args_kwargs.md` - Function arguments and keyword arguments
   - `python_private_attributes.md` - Private attribute conventions
+  - `matrix_algorithms_intro.md` - Matrix algorithms introduction
 
 #### Testing Patterns
+
 - Tests use `pytest` framework
 - Test files follow naming pattern `test_*.py`
 - Tests focus on type checking and protocol validation
 - Example: `fluent-python/p13/randompick_test.py` tests protocol implementation
 
 ### Code Style and Conventions
+
 - Uses type hints extensively (`typing` module)
 - Follows Python naming conventions (snake_case for variables/functions)
 - Uses `TYPE_CHECKING` for import-time type validation
 - Implements Protocol interfaces for structural typing
 
 ### Key Dependencies (from p20/requirements.txt)
+
 - **Web Framework**: Django 5.2.1 with django-bootstrap5
 - **Data Science**: pandas, numpy, matplotlib, plotly
 - **Testing**: pytest
@@ -79,11 +84,13 @@ This repository is a Python learning project with two main educational tracks:
 - **Utilities**: requests, urllib3, certifi
 
 ### VS Code Configuration
+
 - Python language server disabled (`"python.languageServer": "None"`)
 - Custom indentation settings for Python files
 - Located in `.vscode/settings.json`
 
 ### Educational Focus
+
 - Repository serves as a comprehensive Python learning resource
 - Combines theoretical concepts (doc/) with practical examples (fluent-python/, python-crash-course/)
 - Progressive difficulty from basic syntax to advanced design patterns
