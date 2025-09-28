@@ -4,6 +4,7 @@
 import itertools
 import time
 from threading import Thread, Event
+from primes import is_prime
 
 def spin(msg: str, done: Event) -> None: # done 参数的值是一个 threading.Event 实例， 一个用于同步线程的简单对象
     for char in itertools.cycle(r'\|/-'):
@@ -16,7 +17,8 @@ def spin(msg: str, done: Event) -> None: # done 参数的值是一个 threading.
 
     
 def slow() -> int:
-    time.sleep(3)
+    # time.sleep(3)
+    is_prime(5_000_111_000_222_021)
     return 42
 
 

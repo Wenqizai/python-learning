@@ -4,6 +4,7 @@
 import itertools
 import time
 from multiprocessing import Process, synchronize, Event
+from primes import is_prime
 
 def spin(msg: str, done: synchronize.Event) -> None:
     for char in itertools.cycle(r'\|/-'):
@@ -25,7 +26,8 @@ def supervisor() -> int:
     return result
 
 def slow() -> int:
-    time.sleep(3)
+    # time.sleep(3)
+    is_prime(5_000_111_000_222_021)
     return 42
 
 def main() -> None:

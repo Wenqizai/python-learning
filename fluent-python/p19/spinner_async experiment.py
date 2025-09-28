@@ -8,6 +8,7 @@
 
 """
 import itertools
+import multiprocessing
 import time
 from multiprocessing import Process, synchronize, Event
 import asyncio
